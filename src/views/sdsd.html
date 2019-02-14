@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .hbtn {
+            position: relative;
+            box-sizing: border-box;
+            display: inline-block;
+            overflow: hidden;
+            padding: 8px 20px;
+            margin: 0px 3px 6px;
+            text-align: center;
+            border: 2px solid rgb(255, 255, 255);
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            white-space: nowrap;
+            z-index: 0;
+        }
+
+
+        .hbtn i {
+            padding-right: 8px;
+        }
+
+
+        .hb-fill-on::before {
+            position: absolute;
+            content: "";
+            background: rgb(255, 255, 255);
+            transition-duration: 0.3s;
+            z-index: -1;
+            top: 0px;
+            right: auto;
+            bottom: auto;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+
+
+        .hb-fill-on:hover::before {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+
+
+        .hb-fill-on:hover {
+            color: rgb(0, 0, 0);
+            background: rgb(255, 255, 255);
+            transition: color 0.3s ease 0s, background 0s ease 0.3s;
+        }
+
+
+        .hbor1 {
+            border-width: 1px;
+        }
+
+
+        .hbor1::before {
+            border-width: 1px !important;
+        }
+
+
+        .hpad2 {
+            padding: 12px 24px !important;
+        }
+
+
+        .hpill {
+            border-radius: 50px;
+        }
+
+    </style>
+</head>
+<body style="background: black">
+<a href="#" class="hbtn hb-fill-on hbor1 hpad2 hpill">Fade In</a>
+</body>
+</html>
