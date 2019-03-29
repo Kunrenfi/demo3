@@ -1,10 +1,28 @@
 <template>
+
     <div class="weui-cells weui-cells_form">
+        <div> <h1 >这是介绍XXXXXXXXXXXXXX</h1>
+            <h2>ssssss</h2>
+            <h2>ddddddd</h2>
+            <h2>ssssss</h2>
+            <h2>ddddddd</h2>
+            <h2>ssssss</h2>
+            <h2>ddddddd</h2>
+
+
+        </div>
+
         <div class="weui-cell">
             <div class="weui-cell__bd">
                 <div class="weui-uploader">
                     <div class="weui-uploader__hd">
-                        <p class="weui-uploader__title">图片上传</p>
+                        <p class="weui-uploader__title">
+
+
+
+
+
+                        </p>
                         <div class="weui-uploader__info">0/2</div>
                     </div>
                     <div class="weui-uploader__bd">

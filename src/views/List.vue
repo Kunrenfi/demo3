@@ -17,11 +17,18 @@
 
     </div>
         <div>
-            <div v-for="(item,index) in pagelists"
-                 :key="index">
-                {{item.title}}&#45;&#45;{{item.content}}
-                <div @click="infolist()">详情</div>
-            </div>
+            <ul>
+                  <li v-for="(item,index) in pagelists" :key="index">
+
+                      <div class="data_control">
+                          <div class="data_blank"></div>
+                      <a class="data_title">名称：{{item.listName}}</a>
+                      <a class="data_content">证件号：{{item.listNumber}}</a>
+                          <div class="data_console"><div @click="infolist()">{{item.listDetails}}</div></div>
+                      </div>
+                  </li>
+            </ul>
+
         </div>
 
 <!--    <div >
@@ -44,6 +51,7 @@
         store,
         methods:{
             infolist(){
+
                 this.$router.push('/info')
             }
         },
@@ -55,6 +63,31 @@
     }
 </script>
 
-<style>
-
+<style scoped>
+  li{
+      width: 100%;
+      height: 80px;
+  }
+  .data_blank{
+      width: 100%;
+      height: 8px;
+      background-color: rgba(28,31,33,.06);
+  }
+    .data_title{
+        float: left;
+    }
+    .data_content{
+        float: right;
+    }
+    .data_control{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .data_console{
+        width: 100%;
+        margin: 0 10px;
+        background-color: #c6c5c5;
+        height: 40px;
+    }
 </style>

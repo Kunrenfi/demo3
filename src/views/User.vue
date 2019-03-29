@@ -1,12 +1,26 @@
 <template>
     <div class="about">
-        <h1>This is an about page</h1>
+        <h1 >Hello World!</h1>
     </div>
 </template>
 
 <script>
+    import store from '../store.js';
+
     export default {
-        name: "User"
+       date(){
+           return{
+               uname:''
+
+           }
+
+       },
+        computed:{
+            Users(){
+
+                this.uname= store.state.username
+            }
+        }
     }
 </script>
 

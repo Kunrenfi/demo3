@@ -1,19 +1,16 @@
-module.exports={
+module.exports = {
     devServer: {
-        host: '0.0.0.0',
-        hot: true,
+        compress: true,
+
         disableHostCheck: true,
         proxy:{
-            '/api':{
-
-                target:'http://localhost:8082/',
-                ws:true,
-
-            }
+            '/api': {
+        target: 'http://localhost:8082/',
+            changeOrigin: true,
+                pathRewrite:{
+                    '^/api': ''
+                }
+          }
         }
-
     }
-
-
-
 }
